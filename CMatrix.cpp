@@ -1,10 +1,18 @@
 #include <iostream>
 #include "CMatrix.h"
 
+// This class was made to perform the 4x4 Matrix calculations nessecary for 3D rendering
+// Matrix Layout
+// X Y Z 0 <- Local X Axis
+// X Y Z 0 <- Local Y Axis
+// X Y Z 0 <- Local Z Axis
+// X Y Z 1 <- World Position
+
 CMatrix::CMatrix() {
 	this->identity();
 }
 
+// 
 void CMatrix::zero() {
 	this->m_data[0] = 0.0f;
 	this->m_data[1] = 0.0f;
