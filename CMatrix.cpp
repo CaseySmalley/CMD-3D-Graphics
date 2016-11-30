@@ -168,8 +168,8 @@ void CMatrix::inverse() {
 
     det = this->m_data[0] * tmpData[0] + this->m_data[1] * tmpData[4] + this->m_data[2] * tmpData[8] + this->m_data[3] * tmpData[12];
 
-    if (det == 0) return;
-    det = 1.0 / det;
+    if (det == 0.0f) return;
+    det = 1.0f / det;
 
     this->m_data[0] = tmpData[0] * det;
     this->m_data[1] = tmpData[1] * det;
